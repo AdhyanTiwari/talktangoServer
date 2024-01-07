@@ -17,7 +17,7 @@ app.use("/user", userRoute);
 app.use("/chat", chatRoute);
 app.use("/message", messageRoute);
 
-const server = app.listen(process.env.PORT, console.log("The server is running"));
+const server = app.listen(5000, console.log("The server is running"));
 
 const io = require("socket.io")(server, {
     cors: { origin: "*" },
