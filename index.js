@@ -7,7 +7,8 @@ const cors = require("cors")//used to prevent the cors error
 const { default: mongoose } = require("mongoose");
 const { Socket } = require("socket.io");
 dotenv.config()
-mongoose.connect(process.env.MONGO_URI)
+const MONGO_URI = "mongodb+srv://Adhyan:MoxxVG0nmDL8583F@livechatdb.j0ct4ro.mongodb.net/?retryWrites=true&w=majority"
+mongoose.connect(MONGO_URI)
 const app = express();
 app.use(express.json());
 app.use(cors())
